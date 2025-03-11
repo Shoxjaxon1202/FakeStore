@@ -1,0 +1,136 @@
+.good_parent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.good {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  justify-content: space-between;
+  width: 250px;
+  height: 430px;
+
+  &_btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &__image {
+    width: 100%;
+    min-height: 180px;
+    margin-bottom: 15px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+  }
+
+  &__details {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  &__title {
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 0 !important;
+    line-height: normal !important;
+  }
+
+  &__category {
+    font-size: 20px;
+    color: #666;
+  }
+
+  &__price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1e88e5;
+  }
+
+  &__rating {
+    display: flex;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: #444;
+
+    &-count {
+      color: #999;
+    }
+
+    &-rate {
+      font-weight: bold;
+      color: #ff9800;
+    }
+  }
+}
+
+.loader {
+  margin-top: 70px;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #e0e0e0;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.good_btn {
+  margin-top: 15px;
+  background-color: #4caf50; /* Och yashil rang */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #45a049; /* Kichikroq to'q yashil */
+    transform: scale(1.05); /* Katta bo'lish */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: scale(0.95); /* Bosilganda kichikroq bo'lish */
+    background-color: #3e8e41; /* To'qroq yashil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(72, 239, 128, 0.5); /* Fokus uchun chiroyli doira */
+  }
+}
